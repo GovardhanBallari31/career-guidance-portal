@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Career Guidance Portal — CSP Project By B.Tech Students</title>
+<link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+
+<!-- =====================================================
+     EDITABLE: Change team names below
+     ===================================================== -->
+<div class="topbar">
+  <div class="logo">CSP PROJECT</div>
+  <button class="navbtn act" onclick="showPage('careers')">01 · Careers</button>
+  <button class="navbtn" onclick="showPage('roadmap')">02 · Roadmap</button>
+  <button class="navbtn" onclick="showPage('quiz')">03 · Quiz</button>
+  <button class="navbtn" onclick="showPage('scholarships')">04 · Scholarships</button>
+  <button class="navbtn" onclick="showPage('mentorship')">05 · Mentorship</button>
+</div>
+
+<div class="hero">
+  <div class="hbadge">CSP PROJECT · BY · B.TECH STUDENTS</div>
+  <!-- EDITABLE: Change the title and subtitle below -->
+  <h1 class="htitle">Career Guidance <span>Portal</span></h1>
+  <p class="hsub">
+    A comprehensive guide for 10th and Intermediate students (10,10+2) to explore all career paths —
+    Science, Commerce, Arts, Emerging Tech, Professional, Vocational, ITI &amp; Polytechnic.
+  </p>
+  <div class="hstats">
+    <div class="hstat"><div class="n">8</div><div class="l">STREAMS</div></div>
+    <div class="hstat"><div class="n">50+</div><div class="l">CAREERS</div></div>
+    <div class="hstat"><div class="n">12+</div><div class="l">SCHOLARSHIPS</div></div>
+    <div class="hstat"><div class="n">8</div><div class="l">MENTORS</div></div>
+  </div>
+  <!-- EDITABLE: Change team members below -->
+  <div class="hteam">
+    Presented by <span>B.Govardhan</span>
+    &nbsp;·&nbsp; <span>GATES INSTITUTE OF TECHNOLOGY GOOTY</span> &nbsp;·&nbsp; B.Tech CSE <span>2024–28</span>
+  </div>
+</div>
+
+<div class="main">
+
+<!-- ==================== CAREERS PAGE ==================== -->
+<div id="page-careers" class="section show">
+  <div class="seclabel">Step 1 — Academic streams</div>
+  <div class="streamrow" style="margin-bottom:8px">
+    <div class="stab act" onclick="selectStream('science')" id="stab-science">
+      <div class="si">🔬</div><div class="sn">Science</div><div class="sd">PCM / PCB</div>
+    </div>
+    <div class="stab" onclick="selectStream('commerce')" id="stab-commerce">
+      <div class="si">📊</div><div class="sn">Commerce</div><div class="sd">CA / MBA / Law</div>
+    </div>
+    <div class="stab" onclick="selectStream('arts')" id="stab-arts">
+      <div class="si">🎨</div><div class="sn">Arts</div><div class="sd">UPSC / Design</div>
+    </div>
+    <div class="stab" onclick="selectStream('emerging')" id="stab-emerging">
+      <div class="si">🚀</div><div class="sn">Emerging Tech</div><div class="sd">AI / Cyber</div>
+    </div>
+  </div>
+  <div class="seclabel">Step 2 — Skill &amp; trade streams</div>
+  <div class="streamrow">
+    <div class="stab" onclick="selectStream('professional')" id="stab-professional">
+      <div class="si">⚕️</div><div class="sn">Professional</div><div class="sd">New-Age Fields</div>
+    </div>
+    <div class="stab" onclick="selectStream('vocational')" id="stab-vocational">
+      <div class="si">🛠️</div><div class="sn">Vocational</div><div class="sd">Short-term</div>
+    </div>
+    <div class="stab" onclick="selectStream('iti')" id="stab-iti">
+      <div class="si">🔧</div><div class="sn">ITI Courses</div><div class="sd">Trade Certs</div>
+    </div>
+    <div class="stab" onclick="selectStream('poly')" id="stab-poly">
+      <div class="si">🏗️</div><div class="sn">Polytechnic</div><div class="sd">Diploma</div>
+    </div>
+  </div>
+  <div class="seclabel" id="careerHeading" style="margin-top:1.5rem">Career paths — Science</div>
+  <div id="careerList"></div>
+</div>
+
+<!-- ==================== ROADMAP PAGE ==================== -->
+<div id="page-roadmap" class="section">
+  <div class="seclabel">Academic streams</div>
+  <div class="streamrow" style="margin-bottom:8px">
+    <div class="stab act" onclick="selectRoadmap('science')" id="rtab-science"><div class="si">🔬</div><div class="sn">Science</div></div>
+    <div class="stab" onclick="selectRoadmap('commerce')" id="rtab-commerce"><div class="si">📊</div><div class="sn">Commerce</div></div>
+    <div class="stab" onclick="selectRoadmap('arts')" id="rtab-arts"><div class="si">🎨</div><div class="sn">Arts</div></div>
+    <div class="stab" onclick="selectRoadmap('emerging')" id="rtab-emerging"><div class="si">🚀</div><div class="sn">Emerging</div></div>
+  </div>
+  <div class="seclabel">Skill &amp; trade streams</div>
+  <div class="streamrow">
+    <div class="stab" onclick="selectRoadmap('professional')" id="rtab-professional"><div class="si">⚕️</div><div class="sn">Professional</div></div>
+    <div class="stab" onclick="selectRoadmap('vocational')" id="rtab-vocational"><div class="si">🛠️</div><div class="sn">Vocational</div></div>
+    <div class="stab" onclick="selectRoadmap('iti')" id="rtab-iti"><div class="si">🔧</div><div class="sn">ITI</div></div>
+    <div class="stab" onclick="selectRoadmap('poly')" id="rtab-poly"><div class="si">🏗️</div><div class="sn">Polytechnic</div></div>
+  </div>
+  <div class="seclabel" id="rmHeading" style="margin-top:1.5rem">Roadmap — Science stream</div>
+  <div class="rmsteps" id="rmList"></div>
+</div>
+
+<!-- ==================== QUIZ PAGE ==================== -->
+<div id="page-quiz" class="section">
+  <div class="grid4">
+    <div class="mcard"><div class="ml">QUESTIONS</div><div class="mv">6</div><div class="ms">aptitude based</div></div>
+    <div class="mcard"><div class="ml">STREAMS COVERED</div><div class="mv">8</div><div class="ms">all paths</div></div>
+    <div class="mcard"><div class="ml">RESULT</div><div class="mv">Instant</div><div class="ms">stream match</div></div>
+    <div class="mcard"><div class="ml">RETAKES</div><div class="mv">Unlimited</div><div class="ms">try again anytime</div></div>
+  </div>
+  <div class="qwrap">
+    <div class="qpbar"><div class="qpfill" id="qprog" style="width:0%"></div></div>
+    <div class="qnum" id="qnum">Question 1 of 6</div>
+    <div class="qtext" id="qtext"></div>
+    <div class="qopts" id="qopts"></div>
+    <div id="qresult" class="qresult" style="display:none"></div>
+    <button class="qnext" id="qnext" disabled onclick="nextQ()">Next →</button>
+  </div>
+</div>
+
+<!-- ==================== SCHOLARSHIPS PAGE ==================== -->
+<div id="page-scholarships" class="section">
+  <div class="seclabel">Government &amp; Private Scholarships for Intermediate / ITI / Diploma students</div>
+  <div id="schList"></div>
+</div>
+
+<!-- ==================== MENTORSHIP PAGE ==================== -->
+<div id="page-mentorship" class="section">
+  <div class="seclabel">Learn from seniors &amp; working professionals</div>
+  <div id="mentList"></div>
+</div>
+
+</div><!-- /main -->
+
+<div class="footer">
+  Career Guidance Portal &nbsp;·&nbsp; <span>CSP Project</span> &nbsp;·&nbsp; B.Tech Students &nbsp;·&nbsp;
+  All data is for educational guidance purposes only.
+</div>
+
+<button onclick="logout()">
+Logout
+</button>
+
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
