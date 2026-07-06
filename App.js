@@ -2,9 +2,13 @@
    APP LOGIC — wires up CAREERS / ROADMAPS / QUIZ / SCHOLARSHIPS / MENTORS
    ================================================================ */
 
-if(localStorage.getItem("loggedIn") != "true"){
+  const loggedUser = JSON.parse(localStorage.getItem("user"));
 
-    window.location.href="login.html";
+if (!loggedUser) {
+
+    alert("Please Login First");
+
+    window.location.href = "login.html";
 
 }
 
